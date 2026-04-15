@@ -1,0 +1,1182 @@
+[
+  {
+    "id": "4929937c-80eb-4444-a88e-4986dc9ffd90",
+    "image_id": "1342305089472916",
+    "lat": 12.026942607562,
+    "lng": 39.049622424915,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.851667388+03:00"
+  },
+  {
+    "id": "1073b781-a109-4113-ac24-e8b32070b698",
+    "image_id": "284379049832656",
+    "lat": 12.028473619694,
+    "lng": 39.049789142819,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.85166892+03:00"
+  },
+  {
+    "id": "16d9ba05-ecc1-40d3-8b8b-b55b2f6c3e8a",
+    "image_id": "1325505267828534",
+    "lat": 12.02660543172,
+    "lng": 39.049755980988,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.85166998+03:00"
+  },
+  {
+    "id": "dd281005-2900-4031-90ca-4b981bc1d470",
+    "image_id": "169218158440305",
+    "lat": 12.0267865,
+    "lng": 39.049609799972,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.851670766+03:00"
+  },
+  {
+    "id": "afdaacdc-4c32-497a-a0f2-30538eea7138",
+    "image_id": "180915800610627",
+    "lat": 12.026514799972,
+    "lng": 39.0499091,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.851670952+03:00"
+  },
+  {
+    "id": "2d9c887c-bdcb-419a-8dbd-7f99764e2487",
+    "image_id": "183956056931315",
+    "lat": 12.0264687,
+    "lng": 39.0499662,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.851671916+03:00"
+  },
+  {
+    "id": "3c8bf1bf-9af7-4a5f-8b35-856c773fcb8b",
+    "image_id": "196155922342047",
+    "lat": 12.026766063594,
+    "lng": 39.049834231556,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.851672395+03:00"
+  },
+  {
+    "id": "ad981d44-3a91-4563-b983-bd90f5ce9011",
+    "image_id": "212167123802563",
+    "lat": 12.026509908388,
+    "lng": 39.049985613497,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.851672571+03:00"
+  },
+  {
+    "id": "5b0ed889-7e8b-46a1-b8a5-e62ec53da6f9",
+    "image_id": "214430366889009",
+    "lat": 12.0266847,
+    "lng": 39.049721599972,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.851672729+03:00"
+  },
+  {
+    "id": "718c3fbe-7953-42f4-a2d4-1db5ff380fcc",
+    "image_id": "218804186356014",
+    "lat": 12.0266058,
+    "lng": 39.049824399972,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.85167374+03:00"
+  },
+  {
+    "id": "9c4e4942-ae5b-4619-8d13-5a43c1227430",
+    "image_id": "246946810544139",
+    "lat": 12.026696599124,
+    "lng": 39.049614074731,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.8516739+03:00"
+  },
+  {
+    "id": "e39fe7b2-0ed0-4188-a5be-9881e07ac93c",
+    "image_id": "2727040317548002",
+    "lat": 12.0267648,
+    "lng": 39.0496386,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.851674072+03:00"
+  },
+  {
+    "id": "d5ad4c07-da34-4f5c-880b-616adadd39e3",
+    "image_id": "2886124778296434",
+    "lat": 12.026846624232,
+    "lng": 39.049728031748,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.851674517+03:00"
+  },
+  {
+    "id": "19f232a4-53f5-4402-bcdf-390d80a9e855",
+    "image_id": "304225851298341",
+    "lat": 12.0264775,
+    "lng": 39.049954599972,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.851674673+03:00"
+  },
+  {
+    "id": "5fcabecc-c7ed-454c-8f9c-031717f74e0d",
+    "image_id": "318373773025030",
+    "lat": 12.026533425595,
+    "lng": 39.04995847655,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.851674869+03:00"
+  },
+  {
+    "id": "32201fa2-aff1-4179-bd7c-e7d350c5fa6b",
+    "image_id": "1652379751816752",
+    "lat": 12.028421455348,
+    "lng": 39.049771941614,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.851675024+03:00"
+  },
+  {
+    "id": "970513a9-37ee-4f19-9bf5-4ddd1e9fb026",
+    "image_id": "385116066023292",
+    "lat": 12.026552099972,
+    "lng": 39.049892599972,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.851675179+03:00"
+  },
+  {
+    "id": "f24c2414-642f-426b-b557-1bfae2106470",
+    "image_id": "2960186487633724",
+    "lat": 12.0284557,
+    "lng": 39.0496424,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.851675334+03:00"
+  },
+  {
+    "id": "6213982a-38c5-4e07-8118-3413fbed8bc0",
+    "image_id": "465876237808700",
+    "lat": 12.026895038386,
+    "lng": 39.049676888779,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.851676649+03:00"
+  },
+  {
+    "id": "1deddedb-aee7-40d7-97f9-16bbc8fe2b12",
+    "image_id": "469303014352960",
+    "lat": 12.026703065293,
+    "lng": 39.049942754098,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.851676802+03:00"
+  },
+  {
+    "id": "32f97192-3aca-4f6f-864f-c210cf16847b",
+    "image_id": "135349988631426",
+    "lat": 12.027114499972,
+    "lng": 39.049320299972,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.851676953+03:00"
+  },
+  {
+    "id": "4b3b36a6-6bf1-4710-ab15-b6965bc3502c",
+    "image_id": "484674612583400",
+    "lat": 12.026665599972,
+    "lng": 39.049750799972,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.851677108+03:00"
+  },
+  {
+    "id": "85952a3f-5767-4366-833b-a66b1465fac4",
+    "image_id": "517997012912860",
+    "lat": 12.0265283,
+    "lng": 39.049894,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.851677256+03:00"
+  },
+  {
+    "id": "bb3e4334-6e04-4e1e-af89-a2258ec99dd8",
+    "image_id": "1031466250717431",
+    "lat": 12.027605499972,
+    "lng": 39.0489435,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.851677404+03:00"
+  },
+  {
+    "id": "889606f7-e99c-4599-866b-f4d878605a79",
+    "image_id": "163948362230827",
+    "lat": 12.027560023352,
+    "lng": 39.049055988134,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.851677844+03:00"
+  },
+  {
+    "id": "c8565ca0-53b1-4208-b62a-144dd8067b93",
+    "image_id": "524845358927957",
+    "lat": 12.026527034986,
+    "lng": 39.049878989877,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.85167802+03:00"
+  },
+  {
+    "id": "0e7ebe33-841e-4c0e-b988-6038eb2286f0",
+    "image_id": "748594365776118",
+    "lat": 12.026732914834,
+    "lng": 39.049888070284,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.851678168+03:00"
+  },
+  {
+    "id": "1889110a-61df-4eee-aaf1-2529bd9bee47",
+    "image_id": "778466763058621",
+    "lat": 12.026804244532,
+    "lng": 39.049780605906,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.851678318+03:00"
+  },
+  {
+    "id": "80e9dcaf-068f-41a8-b5b6-400f5fd3dbb6",
+    "image_id": "850511078879640",
+    "lat": 12.026556799972,
+    "lng": 39.0498623,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.851678474+03:00"
+  },
+  {
+    "id": "baf4ed24-c6ac-41fc-be0f-400ebf25eb14",
+    "image_id": "314356163379628",
+    "lat": 12.027305099972,
+    "lng": 39.049142799972,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:09.851678622+03:00"
+  },
+  {
+    "id": "288ef8ed-5d1f-425a-bb19-7f71b5209531",
+    "image_id": "552234323221639",
+    "lat": 9.0003307903751,
+    "lng": 38.819961943699,
+    "city": "Addis Ababa",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:45.184739459+03:00"
+  },
+  {
+    "id": "e4780db4-3b11-4494-bffd-0d198de7d472",
+    "image_id": "1219204692004029",
+    "lat": 9.0002976039604,
+    "lng": 38.819995642574,
+    "city": "Addis Ababa",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:45.184740855+03:00"
+  },
+  {
+    "id": "91927bdc-8f02-4fdd-bcc3-227b3c420fa9",
+    "image_id": "375873040420953",
+    "lat": 9.0003817952576,
+    "lng": 38.81989659851,
+    "city": "Addis Ababa",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:30:45.184761924+03:00"
+  },
+  {
+    "id": "f245a6dc-9c57-4f7d-a612-2c5f6abb501f",
+    "image_id": "1006689903274377",
+    "lat": 7.8830586598394,
+    "lng": 38.673272109237,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839006192+03:00"
+  },
+  {
+    "id": "9382935d-b9f0-4f0a-a001-2334d7f31bda",
+    "image_id": "2040864123355441",
+    "lat": 7.8831848,
+    "lng": 38.6732849,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839008206+03:00"
+  },
+  {
+    "id": "1bd4231a-8afe-419b-b49b-0e04c6cbd441",
+    "image_id": "355538642689688",
+    "lat": 7.8831167013198,
+    "lng": 38.673270059695,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839009746+03:00"
+  },
+  {
+    "id": "5f21c716-63d5-4030-bea6-789f5e6c3374",
+    "image_id": "643135948625288",
+    "lat": 7.8850875,
+    "lng": 38.6734541,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839011594+03:00"
+  },
+  {
+    "id": "626deb49-14ea-4f61-8caf-a73d03c4e35b",
+    "image_id": "1170348840840347",
+    "lat": 7.8849722,
+    "lng": 38.6736159,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839012029+03:00"
+  },
+  {
+    "id": "57f418c6-fca3-4fd7-bfb5-06011840a30c",
+    "image_id": "619225206149516",
+    "lat": 7.883153,
+    "lng": 38.673356100002,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839013676+03:00"
+  },
+  {
+    "id": "ffe60227-c2ff-49fc-a4c9-05c606fd54ed",
+    "image_id": "1659303634911496",
+    "lat": 7.8831142,
+    "lng": 38.6734389,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839014624+03:00"
+  },
+  {
+    "id": "a2ba661e-4185-477f-9645-a8bf0bf1c671",
+    "image_id": "907181953113922",
+    "lat": 7.8830492265797,
+    "lng": 38.673287106419,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839015069+03:00"
+  },
+  {
+    "id": "855858ef-7e08-4050-9993-f1f4dfbbac87",
+    "image_id": "731218527843230",
+    "lat": 7.8840497703252,
+    "lng": 38.673387759248,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839015493+03:00"
+  },
+  {
+    "id": "6645477c-b298-4c03-ad73-127103b00f0a",
+    "image_id": "129921189485695",
+    "lat": 7.8832508659341,
+    "lng": 38.673292763237,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839031601+03:00"
+  },
+  {
+    "id": "782f9f47-0bac-4b7f-97c3-49c4c93f4b19",
+    "image_id": "2470107019825203",
+    "lat": 7.8836375,
+    "lng": 38.673172100001,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839032045+03:00"
+  },
+  {
+    "id": "57c7df5d-29a8-45e5-9e3a-a4ca1b11fc67",
+    "image_id": "543991881191441",
+    "lat": 7.8834860999978,
+    "lng": 38.6732448,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839032422+03:00"
+  },
+  {
+    "id": "339f6217-a465-4322-9770-373a0f755d71",
+    "image_id": "574836736865716",
+    "lat": 7.8835418999975,
+    "lng": 38.673296200002,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839033386+03:00"
+  },
+  {
+    "id": "849fa400-8900-4351-84d5-8459cef325a0",
+    "image_id": "145980065092507",
+    "lat": 7.8845047000028,
+    "lng": 38.6734515,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.83903378+03:00"
+  },
+  {
+    "id": "ea5e4061-4e7c-42cc-b27b-b6cead76c35f",
+    "image_id": "611170203516655",
+    "lat": 7.8833413134283,
+    "lng": 38.673293691455,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839034201+03:00"
+  },
+  {
+    "id": "71ad86c8-ac0f-4500-9d0a-b05abd6728a9",
+    "image_id": "6526207507390584",
+    "lat": 7.8834795,
+    "lng": 38.6732844,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.83903457+03:00"
+  },
+  {
+    "id": "d9592fbe-1adb-4276-bfa8-a25bc41cd3a6",
+    "image_id": "8991714404235875",
+    "lat": 7.883436299999,
+    "lng": 38.673278300002,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839034967+03:00"
+  },
+  {
+    "id": "1d823917-75ae-44e7-bd41-7eee714022de",
+    "image_id": "921953449008553",
+    "lat": 7.8844215,
+    "lng": 38.673426299998,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.83903533+03:00"
+  },
+  {
+    "id": "7c95b47b-e8e2-41b7-a4d6-366c49c5b8dd",
+    "image_id": "964934341342630",
+    "lat": 7.8837338000027,
+    "lng": 38.673149400076,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839038175+03:00"
+  },
+  {
+    "id": "7ccc05f3-7ace-4b4b-bccd-cf8bab341f68",
+    "image_id": "1008936193875993",
+    "lat": 7.8831953,
+    "lng": 38.6734476,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839038548+03:00"
+  },
+  {
+    "id": "9e563b39-25c1-4c7b-a87d-1b2fc6ad501c",
+    "image_id": "1040887314044205",
+    "lat": 7.8836585,
+    "lng": 38.673525,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839038971+03:00"
+  },
+  {
+    "id": "a637a505-3056-4b10-88e0-ed29c1537500",
+    "image_id": "1158461232097933",
+    "lat": 7.8835815,
+    "lng": 38.6735116,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839039355+03:00"
+  },
+  {
+    "id": "7ed749c6-4dd6-4241-9d7b-e55dcda02b15",
+    "image_id": "1199207041115471",
+    "lat": 7.8832753,
+    "lng": 38.6734583,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839039729+03:00"
+  },
+  {
+    "id": "59f0e550-f41f-4ae2-b423-cb0ba845614f",
+    "image_id": "1231999781128204",
+    "lat": 7.8834388,
+    "lng": 38.6734877,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839040115+03:00"
+  },
+  {
+    "id": "851dd789-5009-47ce-84a0-47b8c4e7916f",
+    "image_id": "1706215560209536",
+    "lat": 7.8834585,
+    "lng": 38.6733036,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839040991+03:00"
+  },
+  {
+    "id": "4f7dd0bb-10e1-4378-8bd6-07f24f991f0c",
+    "image_id": "241610584993763",
+    "lat": 7.8832423000018,
+    "lng": 38.673320699893,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839041364+03:00"
+  },
+  {
+    "id": "3269d77b-ee40-46df-9b84-0989845d7329",
+    "image_id": "3556278947996210",
+    "lat": 7.8835064,
+    "lng": 38.6734998,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839041777+03:00"
+  },
+  {
+    "id": "a0301dac-7e35-4bae-9097-757472f1c767",
+    "image_id": "412231957315888",
+    "lat": 7.8832372804348,
+    "lng": 38.673303558696,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839042166+03:00"
+  },
+  {
+    "id": "d459b05a-2946-4396-87e0-574e7ef3fc0e",
+    "image_id": "431265962024154",
+    "lat": 7.8834177597536,
+    "lng": 38.673326483676,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839042551+03:00"
+  },
+  {
+    "id": "c5065027-3e54-41a1-ae9d-d30ccf68c9fe",
+    "image_id": "3845046345817248",
+    "lat": 7.8840472,
+    "lng": 38.6735521,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839042931+03:00"
+  },
+  {
+    "id": "35bed8af-d715-4243-a2d6-e7fe9d42d365",
+    "image_id": "441144704156486",
+    "lat": 7.8834480374872,
+    "lng": 38.673320587232,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839043806+03:00"
+  },
+  {
+    "id": "5a5b7947-6aef-4b1d-8f6c-1d5c80c6b259",
+    "image_id": "447441077581601",
+    "lat": 7.8834293999981,
+    "lng": 38.673311100003,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839044187+03:00"
+  },
+  {
+    "id": "c01c0b43-9455-4e7a-82bb-5d1827e740b1",
+    "image_id": "257835769933772",
+    "lat": 7.8838939000026,
+    "lng": 38.6733544,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839044604+03:00"
+  },
+  {
+    "id": "9c80127b-285a-43d4-bb65-fa71dc6783e3",
+    "image_id": "471168411186839",
+    "lat": 7.8835572882766,
+    "lng": 38.6733260502,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839044975+03:00"
+  },
+  {
+    "id": "eb4147ab-36e3-4a72-bfb7-033f85918d31",
+    "image_id": "557849106438909",
+    "lat": 7.8832412,
+    "lng": 38.673347,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839045393+03:00"
+  },
+  {
+    "id": "f345b0c6-906f-4926-ab67-8fb2ef2ec50a",
+    "image_id": "638119575829455",
+    "lat": 7.8837185,
+    "lng": 38.6733256,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839074563+03:00"
+  },
+  {
+    "id": "41c2091d-4993-4ca0-bca8-3a883be6fed6",
+    "image_id": "642231150304429",
+    "lat": 7.8836178142424,
+    "lng": 38.673340269394,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839075463+03:00"
+  },
+  {
+    "id": "b6139930-5f11-4b95-b156-c64162b3183a",
+    "image_id": "842186414554019",
+    "lat": 7.8833606,
+    "lng": 38.6734714,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839075847+03:00"
+  },
+  {
+    "id": "f93f78bf-8d53-433f-b611-65147437705a",
+    "image_id": "950003162320735",
+    "lat": 7.8836098684771,
+    "lng": 38.673349549947,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839076267+03:00"
+  },
+  {
+    "id": "6c8516a5-f229-40aa-95ba-6da58c9cfb3c",
+    "image_id": "563978265832776",
+    "lat": 7.8837712,
+    "lng": 38.6731578,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839076628+03:00"
+  },
+  {
+    "id": "748d26cb-2f00-4cd2-b799-1cc5648dd53c",
+    "image_id": "601873478259496",
+    "lat": 7.8837761000028,
+    "lng": 38.673163300001,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.83907701+03:00"
+  },
+  {
+    "id": "60426b9e-01d1-41a7-9ea0-74b9427b067f",
+    "image_id": "776042517202798",
+    "lat": 7.8838494,
+    "lng": 38.6732944,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839077406+03:00"
+  },
+  {
+    "id": "0a3c4011-8121-4ea4-96cf-e7d9b8418d4b",
+    "image_id": "795729285410923",
+    "lat": 7.8838288,
+    "lng": 38.673258899998,
+    "city": "Ziway",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:45:38.839078283+03:00"
+  },
+  {
+    "id": "a47c99d7-f57d-40b3-a5d0-7fa208fd34a2",
+    "image_id": "1101877293640063",
+    "lat": 12.022836236521,
+    "lng": 39.052255386322,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745668815+03:00"
+  },
+  {
+    "id": "5e321d3c-3c16-4df9-a3e9-3e39a07794d5",
+    "image_id": "133440032159463",
+    "lat": 12.0227658,
+    "lng": 39.0521935,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745669527+03:00"
+  },
+  {
+    "id": "e61c9bf0-ee0b-431d-9a53-959f9a3a5561",
+    "image_id": "973179153455209",
+    "lat": 12.022895125892,
+    "lng": 39.052282736437,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745674117+03:00"
+  },
+  {
+    "id": "2118d994-a74c-47d0-a411-07023debddc2",
+    "image_id": "1318201555228132",
+    "lat": 12.020453559753,
+    "lng": 39.051731973651,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745675013+03:00"
+  },
+  {
+    "id": "20054eff-8af7-4e51-9b00-f7d6923f7bc1",
+    "image_id": "164815525485444",
+    "lat": 12.0230984,
+    "lng": 39.052311699972,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745675219+03:00"
+  },
+  {
+    "id": "1ef63a18-c088-4a79-8ce3-536df1540ff1",
+    "image_id": "266560138541815",
+    "lat": 12.0242634,
+    "lng": 39.0529676,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745676208+03:00"
+  },
+  {
+    "id": "a5823c7a-2ebf-4a14-951c-78ff9c0e53a6",
+    "image_id": "302685438130618",
+    "lat": 12.022958562307,
+    "lng": 39.052306685695,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745676727+03:00"
+  },
+  {
+    "id": "66e3ad99-edc8-4e83-b55c-e95ddd30dcd3",
+    "image_id": "172009211497489",
+    "lat": 12.022869984534,
+    "lng": 39.052298667085,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745676939+03:00"
+  },
+  {
+    "id": "4227ac6b-9448-4343-aace-f260ab21fab0",
+    "image_id": "210786123960166",
+    "lat": 12.023047568015,
+    "lng": 39.052390087643,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745677123+03:00"
+  },
+  {
+    "id": "28ebb083-d701-4448-804d-59f4eab84b1b",
+    "image_id": "802065707097035",
+    "lat": 12.022809799972,
+    "lng": 39.0521965,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745678268+03:00"
+  },
+  {
+    "id": "dad51501-4108-43a1-959b-df342fdbd91f",
+    "image_id": "216359726634068",
+    "lat": 12.022701908607,
+    "lng": 39.052245044911,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745678518+03:00"
+  },
+  {
+    "id": "4617c3dd-269f-416e-9dc4-7d354ce86b1c",
+    "image_id": "268243625025546",
+    "lat": 12.022655570232,
+    "lng": 39.05225643543,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745678702+03:00"
+  },
+  {
+    "id": "ff8690dd-b412-47fe-a85f-b2c0d220852e",
+    "image_id": "288250206290198",
+    "lat": 12.022974299972,
+    "lng": 39.052256499972,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745679155+03:00"
+  },
+  {
+    "id": "e49dc473-cc93-4063-80cc-65213753cfea",
+    "image_id": "3030536787222351",
+    "lat": 12.023066824566,
+    "lng": 39.052353966009,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745679338+03:00"
+  },
+  {
+    "id": "7cc63bb6-5c9f-4460-9064-07a8a30fbfbf",
+    "image_id": "306402387871892",
+    "lat": 12.022797950931,
+    "lng": 39.052283111174,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745679521+03:00"
+  },
+  {
+    "id": "7bad1f9d-2066-493f-bfc1-92be5bb0407c",
+    "image_id": "311272757075557",
+    "lat": 12.022769643685,
+    "lng": 39.052222280342,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745679704+03:00"
+  },
+  {
+    "id": "e2133bfc-73a9-4a1a-8b92-e73449f6f9b5",
+    "image_id": "319291263050112",
+    "lat": 12.023006778393,
+    "lng": 39.052328295535,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745679889+03:00"
+  },
+  {
+    "id": "1ac303c4-b251-47f5-9e60-41433d43d889",
+    "image_id": "336789227783965",
+    "lat": 12.0202302,
+    "lng": 39.051754899972,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745680083+03:00"
+  },
+  {
+    "id": "bd782da4-80c1-4f07-8f2b-b0177ab774b8",
+    "image_id": "356113165852571",
+    "lat": 12.022879606068,
+    "lng": 39.052299477023,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745682993+03:00"
+  },
+  {
+    "id": "651ac0e3-337a-4f50-b65f-1cf798377247",
+    "image_id": "369152537850389",
+    "lat": 12.0228584,
+    "lng": 39.052235899972,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745683177+03:00"
+  },
+  {
+    "id": "796fc042-460b-4f96-a7f5-54bdcbebac62",
+    "image_id": "255360519673801",
+    "lat": 12.024190331637,
+    "lng": 39.053062487405,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.74568336+03:00"
+  },
+  {
+    "id": "dcdb32d9-3dd6-40ba-9cde-9e983d60ea80",
+    "image_id": "387228595759992",
+    "lat": 12.0229104,
+    "lng": 39.0522312,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745683543+03:00"
+  },
+  {
+    "id": "e567adde-2beb-47f1-82f6-9b790ce23280",
+    "image_id": "401161434191076",
+    "lat": 12.022839543708,
+    "lng": 39.052289547858,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745683727+03:00"
+  },
+  {
+    "id": "a293cf62-d284-4e3c-bdbf-0faadd232095",
+    "image_id": "157595046315116",
+    "lat": 12.0238388,
+    "lng": 39.052842699972,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.74568391+03:00"
+  },
+  {
+    "id": "21236c56-19dd-4383-b607-f16aa1a8ec33",
+    "image_id": "4635529059795503",
+    "lat": 12.022966625017,
+    "lng": 39.05233976054,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.74568436+03:00"
+  },
+  {
+    "id": "3a0de207-1a18-4071-a7c5-0bfc222b81be",
+    "image_id": "469027684375680",
+    "lat": 12.022706875358,
+    "lng": 39.052189408245,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745684547+03:00"
+  },
+  {
+    "id": "a0797d34-efb4-4f54-bec2-8d208904ded5",
+    "image_id": "1107365103088765",
+    "lat": 12.024120666165,
+    "lng": 39.053066171928,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745684729+03:00"
+  },
+  {
+    "id": "8e4d9b1e-21a9-4b3d-b46a-c23d692c7a39",
+    "image_id": "484643992742903",
+    "lat": 12.022591229327,
+    "lng": 39.052224344477,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745684913+03:00"
+  },
+  {
+    "id": "8c963d32-7f4d-4b48-a742-7f77b1f39ed5",
+    "image_id": "492627468628017",
+    "lat": 12.022921383935,
+    "lng": 39.052318502238,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745685096+03:00"
+  },
+  {
+    "id": "cf72a4f2-c828-4985-a06f-08fd3b067ee5",
+    "image_id": "494436305018817",
+    "lat": 12.022591229327,
+    "lng": 39.052224344477,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.74568528+03:00"
+  },
+  {
+    "id": "33442eba-d6bf-4d5d-bd06-318d9d364682",
+    "image_id": "276393360865996",
+    "lat": 12.0200195,
+    "lng": 39.051920699972,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745685728+03:00"
+  },
+  {
+    "id": "4029df91-b8e2-4508-a7b8-9d0f198d9ff8",
+    "image_id": "519086215779708",
+    "lat": 12.022719555889,
+    "lng": 39.05228076145,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745685912+03:00"
+  },
+  {
+    "id": "be110290-20b8-4a72-95ca-b1c958b940b7",
+    "image_id": "575324563871927",
+    "lat": 12.0230352,
+    "lng": 39.0523223,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745686096+03:00"
+  },
+  {
+    "id": "7937af84-7638-4c96-9f34-ea92c77f1be8",
+    "image_id": "583998942561158",
+    "lat": 12.023037,
+    "lng": 39.052283899972,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745686279+03:00"
+  },
+  {
+    "id": "91366053-3ed5-4bf8-b6ba-a161984bb05c",
+    "image_id": "2560112917624074",
+    "lat": 12.020109073413,
+    "lng": 39.052045284846,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745686464+03:00"
+  },
+  {
+    "id": "da490607-eef6-4b79-bd88-ebde308dacda",
+    "image_id": "782369575816286",
+    "lat": 12.023008715601,
+    "lng": 39.052364247281,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745689785+03:00"
+  },
+  {
+    "id": "f02cd11b-b1b4-408d-b721-4d2a8f0a25cf",
+    "image_id": "791007158205548",
+    "lat": 12.022756728565,
+    "lng": 39.052275377814,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745690235+03:00"
+  },
+  {
+    "id": "a5e898d5-129e-4cb9-8206-966a1fb86261",
+    "image_id": "889651731611715",
+    "lat": 12.022569576255,
+    "lng": 39.052203322156,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745690418+03:00"
+  },
+  {
+    "id": "1427dc5d-88b3-4a7a-bacf-26f02f776ccb",
+    "image_id": "314020056917864",
+    "lat": 12.0238413,
+    "lng": 39.052854099972,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745690601+03:00"
+  },
+  {
+    "id": "5e11a00c-447a-44f5-8aa5-3fcc33a29e67",
+    "image_id": "895018001063897",
+    "lat": 12.023057116663,
+    "lng": 39.052357437636,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745690786+03:00"
+  },
+  {
+    "id": "f8fdd6c2-9d76-4147-ad45-1f08866a75c9",
+    "image_id": "942594759826074",
+    "lat": 12.023088319986,
+    "lng": 39.052414386776,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745690969+03:00"
+  },
+  {
+    "id": "e1bcfd2d-b154-44c0-80ee-c3cadd7ef295",
+    "image_id": "297838461672529",
+    "lat": 12.024422899972,
+    "lng": 39.052884699972,
+    "city": "Lalibela",
+    "region": "Ethiopia",
+    "difficulty": "medium",
+    "created_at": "2026-04-15T18:47:20.745691152+03:00"
+  }
+]
