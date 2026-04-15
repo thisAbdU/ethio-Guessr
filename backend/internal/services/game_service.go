@@ -22,8 +22,12 @@ func NewGameService(spotRepo repository.SpotRepository, sessionRepo repository.S
 	}
 }
 
-func (s *GameService) StartGame() (*models.GameSession, *models.Spot, error) {
-	spots, err := s.spotRepo.GetRandomSpots(5)
+func (s *GameService) GetRandomSpots(n int) ([]models.Spot, error) {
+	return s.spotRepo.GetRandomSpots(n)
+}
+
+func (s *GameService) StartGame(rounds int) (*models.GameSession, *models.Spot, error) {
+	spots, err := s.spotRepo.GetRandomSpots(rounds)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -54,7 +58,7 @@ func (s *GameService) SubmitGuess(req models.GuessRequest) (*models.GuessResult,
 		return nil, nil, err
 	}
 
-	if session.CurrentRound > 5 {
+	if session.CurrentRound > len(session.SpotIDs) {
 		return nil, nil, errors.New("game already finished")
 	}
 
@@ -80,7 +84,7 @@ func (s *GameService) SubmitGuess(req models.GuessRequest) (*models.GuessResult,
 	session.CurrentRound++
 
 	var nextSpot *models.Spot
-	isGameOver := session.CurrentRound > 5
+	isGameOver := session.CurrentRound > len(session.SpotIDs)
 
 	if !isGameOver {
 		nextSpotID := session.SpotIDs[session.CurrentRound-1]

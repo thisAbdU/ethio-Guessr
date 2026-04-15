@@ -7,6 +7,7 @@ import (
 	"github.com/abdu/ethio-guessr/backend/internal/handlers"
 	"github.com/abdu/ethio-guessr/backend/internal/repository"
 	"github.com/abdu/ethio-guessr/backend/internal/services"
+	"github.com/abdu/ethio-guessr/backend/internal/ws"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
@@ -27,8 +28,11 @@ func main() {
 	// Initialize services
 	gameService := services.NewGameService(spotRepo, sessionRepo)
 
+	// Initialize Hub
+	hub := ws.NewHub()
+
 	// Initialize handlers
-	gameHandler := handlers.NewGameHandler(gameService)
+	gameHandler := handlers.NewGameHandler(gameService, hub)
 
 	// Setup router
 	r := gin.Default()
@@ -47,8 +51,10 @@ func main() {
 	{
 		game := api.Group("/game")
 		{
-			game.GET("/start", gameHandler.StartGame)
+			game.POST("/start", gameHandler.StartGame)
 			game.POST("/guess", gameHandler.SubmitGuess)
+			game.POST("/create_multiplayer", gameHandler.CreateMultiplayerGame)
+			game.GET("/ws", gameHandler.JoinGameWS)
 		}
 	}
 

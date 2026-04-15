@@ -72,7 +72,7 @@
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
+  --radius: 0.25rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -131,10 +131,24 @@
   }
 }
 
+/* Background Noise Utility */
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+}
+
+/* Base utility overwrites for brutalist aesthetic */
+.brutalist-border {
+  @apply border border-zinc-200 shadow-sm;
+}
+
+.brutalist-button {
+  @apply rounded-sm border border-zinc-200 bg-zinc-900 text-zinc-50 font-mono uppercase text-sm tracking-widest transition-colors hover:bg-zinc-800 hover:text-white active:translate-y-px;
+}
+
 .leaflet-container {
   width: 100%;
   height: 100%;
-  background-color: #0a0a0a !important;
+  background-color: #f4f4f5 !important;
 }
 
 .leaflet-tile {
@@ -146,14 +160,16 @@
 }
 
 .leaflet-bar {
-  border: none !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid #e4e4e7 !important;
+  box-shadow: none !important;
+  border-radius: 2px !important;
+  overflow: hidden;
 }
 
 .leaflet-bar a {
   background-color: white !important;
   color: #18181b !important;
-  border-bottom: 1px solid #f4f4f5 !important;
+  border-bottom: 1px solid #e4e4e7 !important;
 }
 
 .leaflet-bar a:hover {
@@ -167,14 +183,15 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: #f4f4f5;
+  border-left: 1px solid #e4e4e7;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
-  border-radius: 4px;
+  background: #d4d4d8;
+  border: 1px solid #e4e4e7;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: #a1a1aa;
 }
