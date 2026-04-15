@@ -294,9 +294,7 @@ export default function Game() {
                             reveal={gameState === 'result' && lastResult ? {
                                 actual: [lastResult.actual_lat, lastResult.actual_lng],
                                 guessed: isMultiplayer 
-                                    ? (playerId === (lastResult as MultiplayerResult).player1.id 
-                                        ? [(lastResult as MultiplayerResult).player1.guessed_lat || 0, (lastResult as MultiplayerResult).player1.guessed_lng || 0] 
-                                        : [(lastResult as MultiplayerResult).player2.guessed_lat || 0, (lastResult as MultiplayerResult).player2.guessed_lng || 0])
+                                    ? [currentGuess?.lat || 0, currentGuess?.lng || 0]
                                     : [(lastResult as GuessResult).guessed_lat, (lastResult as GuessResult).guessed_lng]
                             } : null}
                             disabled={gameState === 'result' || opponentGuessed && false} 
