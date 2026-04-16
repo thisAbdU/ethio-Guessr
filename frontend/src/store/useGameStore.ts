@@ -5,7 +5,10 @@ const NEXT_PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost
 const API_BASE_URL = `${NEXT_PUBLIC_API_URL}/api`;
 
 const getWsBaseUrl = () => {
-  if (process.env.NEXT_PUBLIC_WS_URL) return process.env.NEXT_PUBLIC_WS_URL;
+  if (process.env.NEXT_PUBLIC_WS_URL) {
+      const url = process.env.NEXT_PUBLIC_WS_URL;
+      return url.endsWith('/api') ? url : `${url}/api`;
+  }
   if (typeof window !== 'undefined') {
     return window.location.protocol === 'https:'
       ? `wss://${NEXT_PUBLIC_API_URL.replace(/^https?:\/\//, '')}/api`

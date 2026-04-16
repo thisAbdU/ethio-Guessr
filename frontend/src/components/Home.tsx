@@ -15,6 +15,9 @@ export default function Home() {
     const [rounds, setRounds] = useState(5);
     const [timeLimit, setTimeLimit] = useState(20);
 
+    const [isSoloLoading, setIsSoloLoading] = useState(false);
+    const [isMultiLoading, setIsMultiLoading] = useState(false);
+
     useEffect(() => {
         // Auto-join if session_id is present
         const params = new URLSearchParams(window.location.search);
@@ -25,15 +28,19 @@ export default function Home() {
     }, [joinGame]);
 
     const handleCreateMultiplayer = async () => {
+        setIsMultiLoading(true);
         const sid = await createMultiplayerGame(rounds, timeLimit);
         if (sid) {
             window.history.pushState(null, '', `?session_id=${sid}`);
             joinGame(sid);
         }
+        setIsMultiLoading(false);
     };
 
     const handleSinglePlayer = async () => {
+        setIsSoloLoading(true);
         await startSinglePlayerGame(rounds, timeLimit);
+        setIsSoloLoading(false);
     };
 
     return (
@@ -99,33 +106,23 @@ export default function Home() {
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <Button
-                        size="lg"
                         onClick={handleSinglePlayer}
-                        disabled={isLoading}
-                        className="brutalist-border rounded-sm bg-white hover:bg-zinc-100 px-6 py-6 text-sm text-black font-mono uppercase tracking-widest w-full sm:w-auto flex items-center justify-between group"
+                        disabled={isSoloLoading || isMultiLoading}
+                        className="brutalist-button h-14 text-sm tracking-widest relative z-10 w-full lg:w-auto px-8"
                     >
-                        {isLoading ? (
-                            "INITIALIZING..."
-                        ) : (
-                            <>
-                                <span className="flex items-center gap-2"><User className="w-4 h-4" /> SOLO MODE</span>
-                            </>
-                        )}
+                        {isSoloLoading ? 'INITIALIZING...' : 'SOLO MODE'}
                     </Button>
+
                     <Button
-                        size="lg"
                         onClick={handleCreateMultiplayer}
-                        disabled={isLoading}
-                        className="brutalist-button px-6 py-6 text-sm font-mono uppercase tracking-widest w-full sm:w-auto flex items-center justify-between group"
+                        disabled={isSoloLoading || isMultiLoading}
+                        className="brutalist-button h-14 bg-zinc-900 border-zinc-900 text-white hover:bg-zinc-800 hover:text-white transition-all text-sm tracking-widest w-full lg:w-auto px-8 flex justify-between items-center"
                     >
-                        {isLoading ? (
-                            "INITIALIZING..."
-                        ) : (
-                            <>
-                                <span className="flex items-center gap-2"><Users className="w-4 h-4" /> MULTIPLAYER</span>
-                                <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                            </>
-                        )}
+                        <span className="flex items-center gap-3">
+                            <Users className="w-5 h-5 text-zinc-400" />
+                            {isMultiLoading ? 'ESTABLISHING LINK...' : 'MULTIPLAYER'}
+                        </span>
+                        <ChevronRight className={`w-5 h-5 transition-transform ${isMultiLoading ? 'opacity-0' : 'opacity-100'}`} />
                     </Button>
                 </div>
 
