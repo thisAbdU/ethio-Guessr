@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   description: "The ultimate Ethiopian street view guessing game. Explore the beauty of Ethiopia, from the bustling streets of Addis Ababa to historical landmarks.",
   openGraph: {
     title: "EthioGuessr - Discover Ethiopia",
-    description: "Explore and guess locations across Ethiopia in this immersive street view game.",
-    url: "https://ethio-guessr.vercel.app",
+    description: "Explore and guess locations across Ethiopia in this immersive street view game. Can you pinpoint where you are?",
+    url: "https://ethioguessr.vercel.app",
     siteName: "EthioGuessr",
     images: [
       {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "EthioGuessr - Discover Ethiopia",
-    description: "Explore and guess locations across Ethiopia in this immersive street view game.",
+    description: "Explore and guess locations across Ethiopia in this immersive street view game. Can you pinpoint where you are?",
     images: ["/og-image.png"],
   },
 };
