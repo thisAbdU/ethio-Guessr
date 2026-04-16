@@ -108,7 +108,7 @@ export default function Home() {
                     <Button
                         onClick={handleSinglePlayer}
                         disabled={isSoloLoading || isMultiLoading}
-                        className="brutalist-button h-14 text-sm tracking-widest relative z-10 w-full lg:w-auto px-8"
+                        className="brutalist-button h-14 bg-zinc-100 border-zinc-300 text-zinc-900 hover:bg-zinc-200 transition-all text-sm tracking-widest relative z-10 w-full lg:w-auto px-8"
                     >
                         {isSoloLoading ? 'INITIALIZING...' : 'SOLO MODE'}
                     </Button>

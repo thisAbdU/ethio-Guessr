@@ -55,7 +55,14 @@ export default function Game() {
         }, 1000);
 
         return () => clearInterval(timer);
-    }, [gameState, currentRound]);
+    }, [gameState, currentRound, timeLimit]);
+
+    // Solo mode auto-submission logic when time expires
+    useEffect(() => {
+        if (gameState === 'playing' && timeLeft === 0 && !isMultiplayer) {
+            submitGuess(currentGuess?.lat || 9.145, currentGuess?.lng || 40.489);
+        }
+    }, [timeLeft, gameState, isMultiplayer, currentGuess, submitGuess]);
 
     const handleSubmit = () => {
         if (!currentGuess) return;

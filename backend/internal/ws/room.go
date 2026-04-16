@@ -13,6 +13,7 @@ type RoomAction struct {
 	PlayerID string
 	Lat      float64
 	Lng      float64
+	Round    int
 }
 
 type GameRoom struct {
@@ -119,7 +120,7 @@ func (r *GameRoom) Run() {
                 // Start a timeout in a goroutine
                 go func(round int, duration int) {
                     time.Sleep(time.Duration(duration) * time.Second)
-                    r.Action <- &RoomAction{Type: "timeout", Lat: 0, Lng: 0}
+                    r.Action <- &RoomAction{Type: "timeout", Lat: 0, Lng: 0, Round: round}
                 }(r.CurrentRound, r.TimeLimit)
 
             case "guess":
@@ -146,7 +147,7 @@ func (r *GameRoom) Run() {
                 }
 
             case "timeout":
-                if r.State == "playing" {
+                if r.State == "playing" && r.CurrentRound == action.Round {
                     // Forfeit any player who didn't guess
                     if r.Player1 != nil && !r.Player1.HasGuessed {
                          r.Player1.HasGuessed = true
