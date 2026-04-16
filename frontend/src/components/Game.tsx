@@ -26,6 +26,7 @@ export default function Game() {
         lastResult,
         countdown,
         opponentGuessed,
+        hasSubmittedGuess,
         submitGuess,
         resetGame,
         isLoading,
@@ -77,6 +78,16 @@ export default function Game() {
         setLinkCopied(true);
         setTimeout(() => setLinkCopied(false), 2000);
     };
+
+    // Auto-transition to final results for last round
+    useEffect(() => {
+        if (gameState === 'result' && lastResult?.is_game_over) {
+            const timer = setTimeout(() => {
+                useGameStore.setState({ gameState: 'finished' });
+            }, 8000); // Give 8 seconds to review the last round map
+            return () => clearTimeout(timer);
+        }
+    }, [gameState, lastResult]);
 
     if (gameState === 'waiting') {
         return (
@@ -168,8 +179,27 @@ export default function Game() {
 
     return (
         <div className="h-screen bg-zinc-50 text-zinc-900 flex flex-col overflow-hidden">
-            {/* Countdown Overlay */}
+            {/* Countdown Overlay or Waiting Overlay */}
             <AnimatePresence>
+                {gameState === 'playing' && hasSubmittedGuess && isMultiplayer && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="absolute inset-0 bg-black/40 backdrop-blur-[2px] z-40 flex items-center justify-center font-mono"
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            className="bg-white border-4 border-zinc-900 p-6 md:p-10 shadow-[8px_8px_0_0_rgba(0,0,0,1)] text-center"
+                        >
+                            <div className="w-12 h-12 border-4 border-zinc-900 border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
+                            <h3 className="text-xl md:text-2xl font-black text-zinc-900 uppercase tracking-tighter">WAITING_FOR_OPPONENT</h3>
+                            <p className="text-sm text-zinc-500 mt-2 font-bold uppercase">THE ROUND WILL REVEAL ONCE BOTH GUESS</p>
+                        </motion.div>
+                    </motion.div>
+                )}
+
                 {gameState === 'countdown' && (
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -263,15 +293,30 @@ export default function Game() {
                                     </div>
 
                                     {isMultiplayer ? (
-                                        <div className="w-full brutalist-button h-12 flex items-center justify-center bg-zinc-200 text-zinc-500 border-zinc-300 pointer-events-none">
-                                            SYNCING NEXT ROUND...
+                                        <div className="flex flex-col gap-3">
+                                            {lastResult.is_game_over ? (
+                                                <Button
+                                                    onClick={() => useGameStore.setState({ gameState: 'finished' })}
+                                                    className="w-full brutalist-button h-12 bg-zinc-900 text-white border-zinc-900"
+                                                >
+                                                    VIEW FINAL RESULTS
+                                                </Button>
+                                            ) : (
+                                                <div className="w-full brutalist-button h-12 flex items-center justify-center bg-zinc-100 text-zinc-900 border-zinc-300 font-bold relative overflow-hidden">
+                                                    <div className="absolute left-0 top-0 bottom-0 bg-zinc-900/10 transition-all duration-1000" style={{ width: `${(countdown / 5) * 100}%` }}></div>
+                                                    NEXT ROUND IN {countdown}s
+                                                </div>
+                                            )}
                                         </div>
                                     ) : (
                                         <Button
-                                            onClick={() => nextRoundSinglePlayer((lastResult as any).next_spot)}
+                                            onClick={() => lastResult.is_game_over 
+                                                ? useGameStore.setState({ gameState: 'finished' }) 
+                                                : nextRoundSinglePlayer((lastResult as any).next_spot)
+                                            }
                                             className="w-full brutalist-button h-12 flex items-center justify-center gap-2"
                                         >
-                                            NEXT ROUND <ArrowRight className="w-4 h-4" />
+                                            {lastResult.is_game_over ? 'VIEW FINAL RESULTS' : 'NEXT ROUND'} <ArrowRight className="w-4 h-4" />
                                         </Button>
                                     )}
                                 </motion.div>

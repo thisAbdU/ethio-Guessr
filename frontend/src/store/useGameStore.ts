@@ -73,6 +73,7 @@ interface GameState {
   lastResult: MultiplayerResult | GuessResult | null;
   countdown: number;
   opponentGuessed: boolean;
+  hasSubmittedGuess: boolean;
   isLoading: boolean;
   ws: WebSocket | null;
   isMultiplayer: boolean;
@@ -97,6 +98,7 @@ export const useGameStore = create<GameState>((set, get) => ({
   lastResult: null,
   countdown: 0,
   opponentGuessed: false,
+  hasSubmittedGuess: false,
   isLoading: false,
   ws: null,
   isMultiplayer: false,
@@ -162,13 +164,21 @@ export const useGameStore = create<GameState>((set, get) => ({
           totalScore: myScore,
         });
       } else if (msg.type === 'countdown') {
-        set({ gameState: 'countdown', countdown: msg.payload.seconds });
+        const state = get();
+        const newState: Partial<GameState> = { countdown: msg.payload.seconds };
+        // Only switch to 'countdown' state if we are coming from 'waiting' or 'idle'
+        // This prevents the big countdown overlay from hiding the 'result' map
+        if (state.gameState === 'waiting' || state.gameState === 'idle') {
+          newState.gameState = 'countdown';
+        }
+        set(newState);
       } else if (msg.type === 'round_start') {
         set({
           gameState: 'playing',
           currentRound: msg.payload.round,
           currentSpot: msg.payload.spot,
           opponentGuessed: false,
+          hasSubmittedGuess: false,
         });
       } else if (msg.type === 'opponent_guessed') {
         const state = get();
@@ -184,9 +194,10 @@ export const useGameStore = create<GameState>((set, get) => ({
         else if (state.playerId === result.player2?.id) newScore += result.p2_round_score;
 
         set({
-          gameState: result.is_game_over ? 'finished' : 'result',
+          gameState: 'result',
           lastResult: result,
           totalScore: newScore,
+          hasSubmittedGuess: false,
         });
       }
     };
@@ -207,6 +218,7 @@ export const useGameStore = create<GameState>((set, get) => ({
     if (isMultiplayer) {
       if (ws && ws.readyState === WebSocket.OPEN) {
         ws.send(JSON.stringify({ type: 'guess', lat, lng }));
+        set({ hasSubmittedGuess: true });
       }
     } else {
       // Single player REST fallback
@@ -226,7 +238,7 @@ export const useGameStore = create<GameState>((set, get) => ({
         set({
           lastResult: r,
           totalScore: totalScore + r.score,
-          gameState: r.is_game_over ? 'finished' : 'result',
+          gameState: 'result',
         });
       } catch (error) {
         console.error('Failed to submit guess:', error);
