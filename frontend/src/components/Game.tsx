@@ -36,6 +36,7 @@ export default function Game() {
     const [timeLeft, setTimeLeft] = useState(timeLimit);
     const [currentGuess, setCurrentGuess] = useState<{ lat: number; lng: number } | null>(null);
     const [linkCopied, setLinkCopied] = useState(false);
+    const [showMapMobile, setShowMapMobile] = useState(false);
 
     // Round Timer logic
     useEffect(() => {
@@ -67,6 +68,7 @@ export default function Game() {
     const handleSubmit = () => {
         if (!currentGuess) return;
         submitGuess(currentGuess.lat, currentGuess.lng);
+        setShowMapMobile(false);
     };
 
     const copyLink = () => {
@@ -97,7 +99,7 @@ export default function Game() {
 
                     <div className="flex items-center gap-3 border-t border-zinc-200 pt-6">
                         <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></div>
-                        <h2 className="text-sm font-bold font-mono tracking-tight text-zinc-900 uppercase">WAITING FOR OPERATIVE...</h2>
+                        <h2 className="text-sm font-bold font-mono tracking-tight text-zinc-900 uppercase">WAITING FOR THE OTHER PLAYER...</h2>
                     </div>
                 </motion.div>
             </div>
@@ -188,35 +190,27 @@ export default function Game() {
                 )}
             </AnimatePresence>
 
-            <header className="h-16 border-b border-zinc-200 flex items-center justify-between px-6 bg-white z-20 font-mono">
-                <div className="flex items-center gap-6">
-                    <h2 className="text-lg font-bold tracking-tight">ETHIO_GUESSR</h2>
-                    <div className="h-4 w-px bg-zinc-300"></div>
-                    <div className="flex items-center gap-4 text-xs font-bold uppercase text-zinc-600">
-                        <span className="bg-zinc-100 px-2 py-1 rounded-sm border border-zinc-200">RND {currentRound}/{maxRounds}</span>
-                        <div className="flex items-center gap-2">
-                            <Trophy className="w-3.5 h-3.5" />
+            <header className="h-14 md:h-16 border-b border-zinc-200 flex items-center justify-between px-4 md:px-6 bg-white z-20 font-mono">
+                <div className="flex items-center gap-3 md:gap-6">
+                    <h2 className="text-sm md:text-lg font-bold tracking-tight truncate max-w-[100px] md:max-w-none">ETHIO_GUESSR</h2>
+                    <div className="h-4 w-px bg-zinc-300 hidden sm:block"></div>
+                    <div className="flex items-center gap-2 md:gap-4 text-[10px] md:text-xs font-bold uppercase text-zinc-600">
+                        <span className="bg-zinc-100 px-1.5 py-0.5 md:px-2 md:py-1 rounded-sm border border-zinc-200">R {currentRound}/{maxRounds}</span>
+                        <div className="flex items-center gap-1 md:gap-2">
+                            <Trophy className="w-3 h-3 md:w-3.5 md:h-3.5" />
                             <span>{totalScore}</span>
                         </div>
                     </div>
                 </div>
 
-                <div className="flex flex-col items-end gap-1 w-48">
-                    <div className={`flex items-center justify-between w-full px-3 py-1 rounded-sm border transition-all text-sm font-bold uppercase font-mono shadow-[2px_2px_0_0_rgba(0,0,0,0.1)] ${timeLeft <= 5 ? 'bg-red-600 border-red-700 text-white animate-pulse' : 'bg-zinc-900 border-zinc-900 text-zinc-50'
+                <div className="flex flex-col items-end gap-1 w-32 md:w-48">
+                    <div className={`flex items-center justify-between w-full px-2 md:px-3 py-0.5 md:py-1 rounded-sm border transition-all text-xs md:text-sm font-bold uppercase font-mono shadow-[1px_1px_0_0_rgba(0,0,0,0.1)] md:shadow-[2px_2px_0_0_rgba(0,0,0,0.1)] ${timeLeft <= 5 ? 'bg-red-600 border-red-700 text-white animate-pulse' : 'bg-zinc-900 border-zinc-900 text-zinc-50'
                         }`}>
-                        <div className="flex items-center gap-2">
-                            <Timer className="w-4 h-4" />
-                            <span>TIME</span>
+                        <div className="flex items-center gap-1 md:gap-2">
+                            <Timer className="w-3.5 h-3.5 md:w-4 md:h-4" />
+                            <span className="hidden xs:inline">TIME</span>
                         </div>
-                        <span className="text-lg leading-none">{timeLeft}s</span>
-                    </div>
-                    <div className="w-full h-1 bg-zinc-200 rounded-sm overflow-hidden border border-zinc-300 transform translate-y-0.5">
-                        <motion.div 
-                            className={`h-full ${timeLeft <= 5 ? 'bg-red-500' : 'bg-zinc-900'}`}
-                            initial={{ width: '100%' }}
-                            animate={{ width: `${(timeLeft / timeLimit) * 100}%` }}
-                            transition={{ ease: "linear", duration: 1 }}
-                        />
+                        <span className="text-base md:text-lg leading-none">{timeLeft}s</span>
                     </div>
                 </div>
             </header>
@@ -286,16 +280,26 @@ export default function Game() {
                     </AnimatePresence>
                 </div>
 
-                <div className="w-[450px] border-l border-zinc-200 bg-white p-4 flex flex-col gap-4 z-10 shadow-[-4px_0_15px_rgba(0,0,0,0.03)] bg-noise">
+                <div className={`
+                    fixed inset-0 z-40 transition-transform duration-300 md:relative md:inset-auto md:translate-y-0 md:flex md:w-[450px]
+                    ${showMapMobile ? 'translate-y-0' : 'translate-y-full md:translate-y-0'}
+                    bg-white p-4 flex flex-col gap-4 shadow-[-4px_0_15px_rgba(0,0,0,0.03)] bg-noise border-l border-zinc-200
+                `}>
                     <div className="flex items-center justify-between border-b border-zinc-200 pb-2 mb-2">
                         <span className="text-xs font-mono font-bold tracking-widest text-zinc-400">MAP_TARGET</span>
-                        {opponentGuessed ? (
-                            <span className="text-xs font-mono font-bold tracking-widest text-amber-500 animate-pulse">OPPONENT CONFIRMED</span>
-                        ) : (
-                            <MapPin className="w-4 h-4 text-zinc-400" />
-                        )}
+                        <div className="flex items-center gap-4">
+                            {opponentGuessed && (
+                                <span className="text-[10px] md:text-xs font-mono font-bold tracking-widest text-amber-500 animate-pulse">OPPONENT CONFIRMED</span>
+                            )}
+                            <button 
+                                onClick={() => setShowMapMobile(false)}
+                                className="md:hidden text-zinc-500 hover:text-zinc-900"
+                            >
+                                CLOSE
+                            </button>
+                        </div>
                     </div>
-                    <div className="flex-1 border border-zinc-200 rounded-sm overflow-hidden bg-white">
+                    <div className="flex-1 min-h-[300px] border border-zinc-200 rounded-sm overflow-hidden bg-white">
                         <GuessMap
                             onGuess={(lat, lng) => setCurrentGuess({ lat, lng })}
                             reveal={gameState === 'result' && lastResult ? {
@@ -324,6 +328,16 @@ export default function Game() {
                         )}
                     </Button>
                 </div>
+
+                {/* Mobile Map Toggle */}
+                {!showMapMobile && gameState === 'playing' && (
+                    <button
+                        onClick={() => setShowMapMobile(true)}
+                        className="md:hidden fixed bottom-8 right-8 z-30 w-16 h-16 bg-zinc-900 text-white rounded-full shadow-xl flex items-center justify-center border-4 border-white"
+                    >
+                        <MapPin className="w-8 h-8" />
+                    </button>
+                )}
             </main>
         </div>
     );

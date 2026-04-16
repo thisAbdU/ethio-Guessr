@@ -7,6 +7,8 @@ import (
 	"github.com/abdu/ethio-guessr/backend/internal/repository"
 	"github.com/abdu/ethio-guessr/backend/internal/services"
 	"github.com/joho/godotenv"
+	"time"
+	"fmt"
 )
 
 func main() {
@@ -20,48 +22,54 @@ func main() {
 	repo := repository.NewJSONSpotRepository("data/spots.json")
 	mapillarySvc := services.NewMapillaryService(accessToken, repo)
 
-	// Each bbox: min_lon, min_lat, max_lon, max_lat
-	// Area = (max_lon-min_lon) * (max_lat-min_lat) = 0.09 * 0.10 = 0.009 sq deg (under 0.010 limit)
-	cities := map[string][]float64{
-		// --- Existing (fixed) ---
-		"Addis Ababa":  {38.740, 9.000, 38.830, 9.100},
-		"Lalibela":     {38.970, 12.020, 39.060, 12.120},
-		"Gondar":       {37.440, 12.580, 37.530, 12.680},
-		"Bahir Dar":    {37.370, 11.570, 37.460, 11.670},
-		"Dire Dawa":    {41.830, 9.570, 41.920, 9.670},
-		"Hawassa":      {38.440, 7.030, 38.530, 7.130},
-		"Adama":        {39.260, 8.530, 39.350, 8.630},
-
-		// --- New cities ---
-		"Mekelle":      {39.430, 13.447, 39.520, 13.547},
-		"Axum":         {38.682, 14.070, 38.772, 14.170},
-		"Debre Tabor":  {37.965, 11.800, 38.055, 11.900},
-		"Woldiya":      {39.555, 11.783, 39.645, 11.883},
-		"Dessie":       {39.588, 11.083, 39.678, 11.183},
-		"Debre Markos": {37.672, 10.283, 37.762, 10.383},
-		"Debre Berhan": {39.488, 9.633, 39.578, 9.733},
-		"Jimma":        {36.788, 7.617, 36.878, 7.717},
-		"Nekemte":      {36.505, 9.033, 36.595, 9.133},
-		"Asella":       {39.088, 7.900, 39.178, 8.000},
-		"Ziway":        {38.672, 7.883, 38.762, 7.983},
-		"Shashemene":   {38.488, 7.150, 38.578, 7.250},
-		"Dilla":        {38.265, 6.362, 38.355, 6.462},
-		"Arba Minch":   {37.505, 5.983, 37.595, 6.083},
-		"Sodo":         {37.705, 6.800, 37.795, 6.900},
-		"Hosaena":      {37.813, 7.500, 37.903, 7.600},
-		"Harar":        {42.073, 9.263, 42.163, 9.363},
-		"Jijiga":       {42.755, 9.300, 42.845, 9.400},
-		"Goba":         {39.938, 6.960, 40.028, 7.060},
-		"Gambela":      {34.545, 8.200, 34.635, 8.300},
-		"Assosa":       {34.488, 10.017, 34.578, 10.117},
+	type CityCoord struct {
+		Name string
+		Lat  float64
+		Lon  float64
 	}
 
-	for city, bbox := range cities {
-		log.Printf("Syncing spots for %s...", city)
-		if err := mapillarySvc.SyncSpots(city, bbox); err != nil {
-			log.Printf("Error syncing %s: %v", city, err)
-		} else {
-			log.Printf("Successfully synced %s", city)
+	targets := []CityCoord{
+		{"Addis_Ababa", 9.032, 38.745},
+		{"Nazret_Adama", 8.541, 39.269},
+		{"Bishoftu", 8.751, 38.978},
+		{"Dire_Dawa", 9.593, 41.866},
+		{"Harar", 9.313, 42.118},
+		{"Jijiga", 9.351, 42.796},
+		{"Bahir_Dar", 11.595, 37.391},
+		{"Gondar", 12.607, 37.456},
+		{"Mekelle", 13.496, 39.475},
+		{"Axum", 14.120, 38.718},
+		{"Lalibela", 12.031, 39.041},
+		{"Hawassa", 7.062, 38.477},
+		{"Arba_Minch", 6.021, 37.551},
+		{"Jimma", 7.674, 36.834},
+		{"Dessie", 11.131, 39.636},
+		{"Sodo", 6.853, 37.755},
+		{"Dilla", 6.411, 38.312},
+		{"Shashamane", 7.202, 38.597},
+		{"Gambela", 8.247, 34.591},
+		{"Assosa", 10.063, 34.532},
+		{"Semera_Logia", 11.791, 40.923},
+		{"Gode", 5.952, 43.551},
+	}
+
+	for _, city := range targets {
+		log.Printf("Starting Grid Sync for %s...", city.Name)
+		// Try a 3x3 grid around the center to find green dots without timing out
+		for dx := -1; dx <= 1; dx++ {
+			for dy := -1; dy <= 1; dy++ {
+				lon := city.Lon + float64(dx)*0.015
+				lat := city.Lat + float64(dy)*0.015
+				bbox := []float64{lon, lat, lon + 0.01, lat + 0.01}
+				
+				if err := mapillarySvc.SyncSpots(fmt.Sprintf("%s_%d_%d", city.Name, dx, dy), bbox); err != nil {
+					// Ignore "no coverage" for sub-grids
+					if err.Error() != "no coverage found in this area" {
+						// log.Printf("      [SKIP] Grid %d,%d failed: %v", dx, dy, err)
+					}
+				}
+				time.Sleep(1 * time.Second)
+			}
 		}
 	}
 

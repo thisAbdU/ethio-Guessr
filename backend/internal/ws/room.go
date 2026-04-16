@@ -162,13 +162,16 @@ func (r *GameRoom) Run() {
                     r.evaluateRound()
                 }
 
-            case "next_round_countdown":
-                r.broadcastMsg("countdown", map[string]int{"seconds": 5})
-                go func() {
-                    time.Sleep(5 * time.Second)
-                    r.Action <- &RoomAction{Type: "start_round"}
-                }()
-            }
+			case "next_round_countdown":
+				r.broadcastMsg("countdown", map[string]int{"seconds": 5})
+				go func() {
+					time.Sleep(5 * time.Second)
+					r.Action <- &RoomAction{Type: "start_round"}
+				}()
+
+			case "close_room":
+				return // Exit Run goroutine
+			}
 		}
 	}
 }
@@ -259,5 +262,12 @@ func (r *GameRoom) evaluateRound() {
              }
              r.Action <- &RoomAction{Type: "start_round"}
          }()
+    } else {
+        // Schedule room deletion after some time to allow players to see results
+        go func() {
+            time.Sleep(30 * time.Second)
+            r.Hub.UnregisterRoom(r.ID)
+            r.Action <- &RoomAction{Type: "close_room"}
+        }()
     }
 }

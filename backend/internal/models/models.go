@@ -18,6 +18,7 @@ type GameSession struct {
 	CurrentRound int      `json:"current_round"`
 	TotalScore   int      `json:"total_score"`
 	SpotIDs      []string `json:"spot_ids"`
+	TimeLimit    int      `json:"time_limit"`
 	StartTime    time.Time `json:"start_time"`
 }
 

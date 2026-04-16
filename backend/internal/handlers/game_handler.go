@@ -40,6 +40,8 @@ func (h *GameHandler) CreateMultiplayerGame(c *gin.Context) {
 		req.Rounds = 5
 		req.TimeLimit = 20
 	}
+	
+	// Sanitize inputs and ensure we have valid values
 	if req.Rounds <= 0 {
 		req.Rounds = 5
 	}
@@ -101,12 +103,17 @@ func (h *GameHandler) StartGame(c *gin.Context) {
 	var req CreateGameReq
 	if err := c.ShouldBindJSON(&req); err != nil {
 		req.Rounds = 5
+		req.TimeLimit = 20
 	}
+	
 	if req.Rounds <= 0 {
 		req.Rounds = 5
 	}
+	if req.TimeLimit <= 0 {
+		req.TimeLimit = 20
+	}
 
-	session, firstSpot, err := h.gameService.StartGame(req.Rounds)
+	session, firstSpot, err := h.gameService.StartGame(req.Rounds, req.TimeLimit)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return

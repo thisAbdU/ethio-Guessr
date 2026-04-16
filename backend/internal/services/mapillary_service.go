@@ -61,6 +61,10 @@ func (s *MapillaryService) SyncSpots(city string, bbox []float64) error {
 		return err
 	}
 
+	if len(mResp.Data) == 0 {
+		return fmt.Errorf("no coverage found in this area")
+	}
+
 	var newSpots []models.Spot
 	for _, f := range mResp.Data {
 		newSpots = append(newSpots, models.Spot{
@@ -75,5 +79,6 @@ func (s *MapillaryService) SyncSpots(city string, bbox []float64) error {
 		})
 	}
 
+	fmt.Printf("   [HIT] Found %d images for %s\n", len(newSpots), city)
 	return s.spotRepo.AddSpots(newSpots)
 }

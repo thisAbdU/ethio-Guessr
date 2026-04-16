@@ -26,7 +26,7 @@ func (s *GameService) GetRandomSpots(n int) ([]models.Spot, error) {
 	return s.spotRepo.GetRandomSpots(n)
 }
 
-func (s *GameService) StartGame(rounds int) (*models.GameSession, *models.Spot, error) {
+func (s *GameService) StartGame(rounds int, timeLimit int) (*models.GameSession, *models.Spot, error) {
 	spots, err := s.spotRepo.GetRandomSpots(rounds)
 	if err != nil {
 		return nil, nil, err
@@ -42,6 +42,7 @@ func (s *GameService) StartGame(rounds int) (*models.GameSession, *models.Spot, 
 		CurrentRound: 1,
 		TotalScore:   0,
 		SpotIDs:      spotIDs,
+		TimeLimit:    timeLimit,
 		StartTime:    time.Now(),
 	}
 
